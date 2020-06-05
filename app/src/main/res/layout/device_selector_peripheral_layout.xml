@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/peripheral"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rect_device_selector_bg"
+        android:paddingTop="80dp"
+        android:paddingBottom="80dp">
+
+        <ImageView
+            android:id="@+id/peripheral_image_view"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/aox_black"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/peripheral_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAllCaps="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/peripheral_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"
+        android:layout_marginTop="60dp"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

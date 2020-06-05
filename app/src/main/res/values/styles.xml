@@ -1,0 +1,74 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="GreenRoundedButton" parent="@style/RoundedButton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/green_button</item>
+    </style>
+    <style name="RoundedButton">
+        <item name="android:paddingBottom">1.0dip</item>
+    </style>
+    <style name="PeripheralImage">
+        <item name="android:layout_width">150.0dip</item>
+        <item name="android:layout_height">300.0dip</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+    <style name="BlackRoundedButton" parent="@style/RoundedButton">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@drawable/black_transparent_button</item>
+    </style>
+    <style name="NavigationHeader1Item">
+        <item name="android:textSize">24.0sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">15.0dip</item>
+        <item name="android:layout_marginBottom">7.0dip</item>
+    </style>
+    <style name="NavigationHeader2Item" parent="@style/NavigationHeader1Item">
+        <item name="android:textSize">12.0sp</item>
+    </style>
+    <style name="WhiteRoundedButton" parent="@style/RoundedButton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/white_transparent_button</item>
+    </style>
+    <style name="GameRadioButton">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+    <style name="RedRoundedButton" parent="@style/RoundedButton">
+        <item name="android:textColor">#ff0000</item>
+        <item name="android:background">@drawable/red_transparent_button</item>
+    </style>
+    <style name="ThemeRadioButton">
+        <item name="android:layout_width">@dimen/radio_color_theme_button_size</item>
+        <item name="android:layout_height">@dimen/radio_color_theme_button_size</item>
+    </style>
+    <style name="TextGuide">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="MyDialogStyleBottom" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        !-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        !-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        !-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        !-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        !-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+</resources>

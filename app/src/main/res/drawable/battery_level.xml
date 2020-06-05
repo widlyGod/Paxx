@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/battery_empty" android:maxLevel="0" />
+    <item android:drawable="@mipmap/battery_1" android:maxLevel="25" />
+    <item android:drawable="@mipmap/battery_2" android:maxLevel="50" />
+    <item android:drawable="@mipmap/battery_3" android:maxLevel="75" />
+    <item android:drawable="@mipmap/battery_4" android:maxLevel="100" />
+</level-list>

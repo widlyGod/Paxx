@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dynamicModeImageView"
+    android:layout_width="@dimen/dynamic_mode_icon_size"
+    android:layout_height="@dimen/dynamic_mode_icon_size"
+    android:paddingRight="10.0dip" />

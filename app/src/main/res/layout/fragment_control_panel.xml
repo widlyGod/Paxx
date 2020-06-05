@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/deviceLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/ic_device_control_bg">
+
+    <ImageView
+        android:id="@+id/control_back_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="20dp"
+        android:src="@mipmap/ic_go_back" />
+
+    <ImageView
+        android:id="@+id/control_setting_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingRight="16dp"
+        android:paddingTop="20dp"
+        android:src="@mipmap/ic_setting" />
+
+    <ImageView
+        android:id="@+id/batteryImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/battery_level"
+        android:visibility="visible" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/dynamicModeRecyclerView"
+        android:layout_width="fill_parent"
+        android:layout_height="75.0dip"
+        android:layout_above="@+id/currentHeaterTemp"
+        android:layout_marginBottom="30.0dip"
+        android:clipToPadding="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/currentHeaterTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/batteryImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <FrameLayout
+        android:id="@+id/temperatureControlContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="110.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75.0dip"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/circleRecyclerView"
+            android:layout_width="fill_parent"
+            android:layout_height="100.0dip"
+            android:layout_gravity="center_vertical"
+            android:clipToPadding="false" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/temperature_num_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentHeaterTemp"
+        android:layout_centerInParent="true"
+        android:padding="10dp">
+
+        <com.paxx.app.ui.util.AnimatedCircle
+            android:id="@+id/temperatureRing"
+            android:layout_width="230.0dip"
+            android:layout_height="230.0dip"
+            android:layout_gravity="center_horizontal" />
+
+        <com.paxx.app.ui.util.ImageViewPlus
+            android:id="@+id/temperatureBg"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"/>
+
+        <LinearLayout
+            android:id="@+id/temperature_kind_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/temperature_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="360"
+                android:textColor="#64E4FB"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/temperature_type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:text="℉"
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/temperature_change_ll"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperature_num_rl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/control_temperature_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/temperature_up_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:scaleType="center"
+            android:src="@mipmap/ic_temperature_up" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="#cccccc" />
+
+        <ImageView
+            android:id="@+id/temperature_down_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:scaleType="center"
+            android:src="@mipmap/ic_temperature_down" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/modify_serial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="修改设备序列号"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+</RelativeLayout>

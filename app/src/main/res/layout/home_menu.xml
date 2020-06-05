@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:paddingLeft="15.0dip" android:paddingTop="30.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="25.0sp" android:textColor="#ff616161" android:gravity="center" android:id="@+id/home_menu_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account" android:layout_alignParentTop="true" />
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/shop_layout" android:tag="@string/url_shopping" android:layout_width="wrap_content" android:layout_height="50.0dip" android:layout_marginTop="20.0dip" android:layout_below="@+id/home_menu_title" android:onClick="onMenuItemClick">
+        <TextView android:gravity="center|right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/shop" android:layout_alignTop="@+id/shop_icon" android:layout_alignBottom="@+id/shop_icon" android:layout_marginStart="14.0dip" android:layout_toEndOf="@+id/shop_icon" />
+        <ImageView android:id="@+id/shop_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/shop" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/find_store_layout" android:tag="@string/url_locate_store" android:layout_width="wrap_content" android:layout_height="50.0dip" android:layout_marginTop="10.0dip" android:layout_below="@+id/shop_layout" android:onClick="onMenuItemClick">
+        <ImageView android:id="@+id/find_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/find_a_store" />
+        <TextView android:gravity="center|right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/find_a_store" android:layout_alignTop="@+id/find_icon" android:layout_alignBottom="@+id/find_icon" android:layout_marginStart="14.0dip" android:layout_toEndOf="@+id/find_icon" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/support_layout" android:tag="@string/url_support" android:layout_width="wrap_content" android:layout_height="50.0dip" android:layout_marginTop="10.0dip" android:layout_below="@+id/find_store_layout" android:onClick="onMenuItemClick">
+        <ImageView android:id="@+id/support_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/support" />
+        <TextView android:gravity="center|right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/support" android:layout_alignTop="@+id/support_icon" android:layout_alignBottom="@+id/support_icon" android:layout_marginStart="14.0dip" android:layout_toEndOf="@+id/support_icon" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/add_pax_layout" android:layout_width="wrap_content" android:layout_height="50.0dip" android:layout_marginTop="15.0dip" android:layout_below="@+id/support_layout" android:onClick="goToDeviceDiscovery">
+        <ImageView android:id="@+id/add_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/add_a_pax" />
+        <TextView android:gravity="center|right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/add_a_pax" android:layout_alignTop="@+id/add_icon" android:layout_alignBottom="@+id/add_icon" android:layout_marginStart="14.0dip" android:layout_toEndOf="@+id/add_icon" />
+    </RelativeLayout>
+    <FrameLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/metric_layout" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="10.0dip" android:layout_below="@+id/add_pax_layout">
+        <TextView android:gravity="center|right" android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/measurement" />
+        <Button android:layout_gravity="center_vertical" android:id="@+id/butMeasurement" android:layout_width="wrap_content" android:layout_height="30.0dip" android:text="@string/f" android:textAllCaps="false" style="@style/BlackRoundedButton" />
+    </FrameLayout>
+    <TextView android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PAX Labs" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+    <TextView android:id="@+id/build_version_number" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>
